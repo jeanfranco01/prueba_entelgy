@@ -9,7 +9,7 @@
 </head>
 <body>
     <pais-1></pais-1>
-    <div id="info">sdsadsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+    <div id="info"></div>
 </body>
 </html>
 <script>
@@ -19,12 +19,12 @@
         .catch(error =>console.error(error));
 
     const mostrarData = (datos) =>{
-        console.log(datos);
+        console.log(datos.data);
         body = '';
-        for( let i = 0 ; i<datos.length ; i++){
+        for( let i = 0 ; i<datos.data.length ; i++){
 
-            body += `dasdsadsdssdsadsadaaaaaaaaaaaaaaaaaaaaaa `;
+            body += `<div> ${datos.data[i].id}</div><div> ${datos.data[i].email}</div><div> ${datos.data[i].first_name}</div><div> ${datos.data[i].avatar}</div> `;
         }
-        document.getElementById('info').innerHTML=body;
+        document.getElementById('info').innerHTML = body
     }
 </script>

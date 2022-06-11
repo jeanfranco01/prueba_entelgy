@@ -8,6 +8,7 @@ class main extends HTMLElement{
     }
 
     connectedCallback(){
+        
         this.innerHTML="<div>holadsadsa mundo</div>";
     }
 }
